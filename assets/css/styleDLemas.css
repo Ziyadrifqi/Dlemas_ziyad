@@ -1,0 +1,268 @@
+/* Style for navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(253, 52%, 26%);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+.nav-links li a:hover {
+    text-decoration: underline;
+    color: rgb(180, 200, 244);
+}
+
+/* Style for login button */
+.login-button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.login-button a:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Style for content */
+.content {
+    text-align: center; /* meletakkan teks di tengah */
+    padding: 20px; /* menambahkan padding untuk membuat konten lebih rapi */
+    max-width: 800px; /* set lebar maksimum untuk konten */
+    margin: 0 auto; /* meletakkan konten di tengah */
+}
+
+/* Style for welcome photo container */
+.welcome-photo-container {
+    width: 50%; /* set lebar container untuk foto */
+    margin: 0 auto; /* meletakkan container di tengah */
+}
+
+.welcome-photo {
+    display: block;
+    max-width: 100%; /* Menyesuaikan lebar gambar dengan lebar konten */
+    max-height: 300px; /* Mengatur tinggi maksimum gambar */
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for gallery container */
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Mengatur scroll snap horizontal */
+}
+
+/* Style for each card */
+.card {
+    flex: 0 0 auto;
+    width: 300px; /* Atur lebar kartu sesuai kebutuhan */
+    scroll-snap-align: start; /* Setiap kartu akan menempel pada titik awal ketika digulir */
+    margin-right: 20px; /* Beri jarak antar kartu */
+    transition: transform 0.5s ease; /* Animasi perpindahan kartu */
+    background-color: rgb(62, 62, 179);
+    color: white;
+}
+
+/* Style for card image */
+.card img {
+    width: 100%;
+    height: 200px; /* Atur tinggi gambar */
+    object-fit: cover;
+}
+
+/* Style for card body */
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style for card text */
+.card-text {
+    margin-top: 10px;
+}
+/* Style for card on hover */
+.card:hover {
+    transform: scale(0.95); /* Pengurangan skala ketika dihover */
+}
+
+/* Style for address and map container */
+#location {
+    text-align: center; /* Menengahkan teks */
+    color: black; /* Warna teks */
+    font-size: 24px; /* Ukuran font */
+    margin-top: 20px; /* Jarak atas dari elemen sebelumnya */
+    margin-bottom: 20px; /* Jarak bawah dari elemen selanjutnya */
+}
+.address-map {
+    display: flex;
+    justify-content: center; /* Memusatkan card secara horizontal */
+    margin-top: 20px; /* Tambahkan margin atas agar terlihat terpisah dari konten sebelumnya */
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+/* Style for card */
+.address-map .card {
+    width: 80%; /* Lebarkan card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Mengatur tata letak menjadi flexbox */
+    background-color: rgb(62, 62, 179);
+}
+
+/* Style for card body */
+.address-map .card-body {
+    flex: 1; /* Menyesuaikan bagian dari card body */
+    padding: 20px;
+}
+.address-map .card:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Efek bayangan lebih kuat saat dihover */
+}
+/* Style for map iframe */
+.address-map .map-container iframe {
+    width: 100%; /* Atur lebar penuh untuk iframe */
+    height: 400px; /* Atur tinggi peta */
+}
+
+/* Media query for wider screens */
+@media (min-width: 768px) {
+    .address-map .card {
+        width: 50%; /* Adjust card width for wider screens */
+    }
+}
+
+/* Style for footer */
+.index-footer {
+    background-color: hsl(253, 52%, 26%); /* Warna latar belakang footer */
+    color: white; /* Warna teks putih */
+    padding: 20px; /* Padding di dalam footer */
+    text-align: center; /* Posisi teks di tengah */
+    width: 100%; /* Lebar footer sesuai dengan lebar layar */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan di bagian atas footer */
+}
+
+/* Style for text inside footer */
+.index-footer p {
+    margin: 0; /* Hapus margin bawaan */
+}
+
+:root {
+    --main-bg-color: linear-gradient(to bottom, hsl(190, 70%, 87%), hsl(194, 45%, 58%), hsl(222, 36%, 50%));
+  }
+  
+body {
+    background: var(--main-bg-color);
+    color: #333;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+#wrapper{
+    background: #fff;
+    width: 540px;
+    margin: auto;
+    }
+    
+#wrapper header{
+    background: hsl(253, 52%, 26%);
+    padding: 20px;
+    }
+
+#wrapper header hgroup{
+    float: left;
+    color: #fff;
+    }
+
+#wrapper header nav{
+    background-color:  hsl(253, 52%, 26%);
+    float: right;
+    margin-top: 50px;
+    }
+
+#wrapper header nav ul{
+    padding: 0;
+    margin: 0;
+    }
+
+#wrapper header nav ul li{
+    float: left;
+    list-style: none;
+    }
+
+#wrapper header nav ul li a{
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    }
+
+#wrapper header nav ul li a:hover {
+    color:rgb(180, 200, 244);
+}
+
+.clear {
+    clear: both;
+}
+
+footer {
+    background: hsl(253, 52%, 26%);
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+center {
+    background-color: #fff;
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+}
